@@ -4,13 +4,29 @@
   </head>
   <body>
     <a-scene>
-         <a-box wireframe=true position="0 1 -11" rotation="0 95 0" width="2" height="2" depth="2">
-      <a-box position="0 0 0" width="8" height="4" depth="3" color="orange"></a-box>
+      <!-- back body -->
+          <a-box wireframe=true position="0 1.2 -11" rotation="0 95 0" width="2" height="2" depth="2">
+      <a-box position="0 1.2 0" width="8" height="3" depth="3" color="orange"></a-box>
+        </a-box>
+         <!-- front head -->
+         <a-box wireframe=true position="0 1.2 -9" rotation="0 95 0" width="2" height="2" depth="2">
+      <a-box position="0 0 0" width="8" height="1.7" depth="3" color="orange"></a-box>
          </a-box>
-         
-         <a-box wireframe=true position="0 1 -0.12" rotation="0 95 0" width="2" height="2" depth="2">
-      <a-box position="0 0 0" width="8" height="2" depth="2" color="orange"></a-box>
-         </a-box>
+
+          <!-- front wheel -->
+      <a-sphere position="-1 0.09 -6" rotation="0 95 0" radius="0.8" color="black"></a-sphere>
+      <a-sphere position="1.5 0.09 -6" rotation="0 95 0" radius="0.8" color="black"></a-sphere>   
+           <!-- back wheel -->
+       <a-sphere position="-2 0.09 -12" rotation="0 95 0" radius="0.8" color="black"></a-sphere>
+      <a-sphere position="1.5 0.09 -12" rotation="0 95 0" radius="0.8" color="black"></a-sphere>   
+
+      <!-- front window -->
+     <a-box position="0.3 3 -7" rotation="0 95 90" width="1" height="0.3" depth="2.5" color="white"></a-box>
+      <!-- left side window -->
+     <a-box position="-1.2 3 -9" rotation="0 0 90" width="1" height="0.3" depth="2.5" color="white"></a-box>
+     <a-box position="-1.5 3 -12" rotation="0 0 90" width="1" height="0.3" depth="2.5" color="white"></a-box>
+     <a-box position="-1.2 3 -9" rotation="0 0 90" width="1" height="0.3" depth="2.5" color="white"></a-box>
+     <a-box position="-1.2 3 -9" rotation="0 0 90" width="1" height="0.3" depth="2.5" color="white"></a-box>
 
        <a-plane position="0 0 -4" rotation="-90 0 0" width="50" height="50" color="#7BC8A4"></a-plane>
       <a-sky src="blue sky.jpg"></a-sky>
