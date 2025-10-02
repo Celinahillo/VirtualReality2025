@@ -7,6 +7,35 @@
       <a-assets>
         <img id="texture" src="pacman_maze.jpg" />
       </a-assets>
+
+      <a-assets>
+        <img id="eye" src="pacmaneye.jpg" />
+      </a-assets>
+
+       <a-box wireframe=true position="0.1 0.9 -5"  rotation="0 290 0" width="1" height="1" depth="1">
+<a-sphere side="double" phi-start="0" phi-length="180" position="1 1 1" radius="1" rotation="-45 0 0" width="20" height="0.3" color="yellow"></a-sphere>
+<a-sphere side="double" phi-start="0" phi-length="180" position="1 1 1" radius="1" rotation="45 0 0" width="20" height="0.3" color="yellow"></a-sphere>
+ <a-sphere src="#eye" position="0.1 1.5 0.87" radius="0.175"></a-sphere>
+  <a-sphere src="#eye" position="1.9 1.5 0.87" radius="0.175"></a-sphere>
+</a-box>
+
+ <a-box wireframe=true position="1 0 1"  rotation="0 0 0" width="1" height="1" depth="1">
+<a-cylinder position="3 2 -5" radius="1" rotation="90 0 0" width="10" height="0.3" color="white"></a-cylinder>
+<a-cylinder segments-radial="3" position="3 1 -5" radius="1" rotation="90 90 90" width="10" height="0.3" side="double" color="white"></a-cylinder>
+</a-box>
+<a-box wireframe=true position="0 0 1"  rotation="0 0 0" width="1" height="1" depth="1">
+<a-cylinder position="3 2 -5" radius="1" rotation="90 0 0" width="10" height="0.3" color="white"></a-cylinder>
+<a-cylinder segments-radial="3" position="3 1 -5" radius="1" rotation="90 90 90" width="10" height="0.3" side="double" color="white"></a-cylinder>
+</a-box>
+<a-box wireframe=true position="-1 0 1"  rotation="0 0 0" width="1" height="1" depth="1">
+<a-cylinder position="3 2 -5" radius="1" rotation="90 0 0" width="10" height="0.3" color="white"></a-cylinder>
+<a-cylinder segments-radial="3" position="3 1 -5" radius="1" rotation="90 90 90" width="10" height="0.3" side="double" color="white"></a-cylinder>
+</a-box>
+
+<a-box wireframe=true position="-0.1 1 1"  rotation="0 0 0" width="1" height="1" depth="1">
+<a-cylinder position="3 2 -5" radius="1" rotation="90 0 0" width="10" height="0.3" color="white"></a-cylinder>
+</a-box>
+
       <a-plane position="0 0 -4" rotation="-90 0 0" width="20" height="20" repeat="5 5" src="#texture"></a-plane>
       <a-sky color="black"></a-sky>
     </a-scene>
