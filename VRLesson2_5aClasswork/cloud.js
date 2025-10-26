@@ -4,7 +4,12 @@ class Cloud{
     this.obj = document.createElement("a-entity");
     let shapes = ["a-dodecahedron","a-icosahedron","a-octahedron","a-tetrahedron"];
 
-    for(let i = -1; i <= 1; i++){
+    this.x = x;
+    this.y = y;
+    this.z = z;
+    this.dx = 0.1;
+
+     for(let i = -1; i <= 1; i++){
       let r = rnd(0,shapes.length);
       let puff = document.createElement(shapes[r]);
       puff.setAttribute("position",{x:i, y:0, z:0});
@@ -14,4 +19,12 @@ class Cloud{
     scene.append( this.obj )
   }
   //Challenge 2: Create a function fly() which increases x by dx and updates the Cloud object to that x position
+    fly(){
+    this.x += this.dx;
+    this.obj.setAttribute("position", {x: this.x, y: this.y, z:this.z});
+  }
+
+
+
+
 }
