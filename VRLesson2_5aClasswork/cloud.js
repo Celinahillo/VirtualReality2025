@@ -9,7 +9,7 @@ class Cloud{
     this.z = z;
     this.dx = 0.1;
 
-     for(let i = -1; i <= 1; i++){
+     for(let i = 1; i <= 1; i++){
       let r = rnd(0,shapes.length);
       let puff = document.createElement(shapes[r]);
       puff.setAttribute("position",{x:i, y:0, z:0});
