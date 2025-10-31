@@ -31,6 +31,8 @@ loop();
 function loop(){
   ufo.spin();
 
+
+
   rocket.fly();
 
   window.requestAnimationFrame( loop );
