@@ -1,8 +1,13 @@
 class Ufo{
   constructor(x,y,z){
-    this.a = 0;
-    this.da = 1;
     this.obj = document.createElement("a-entity");
+    this.x = x;
+    this.y = y;
+    this.z = z;
+    this.dx = 0.1;
+    this.dy = 0.02;
+    this.ry = 0;
+    this.spinSpeed = 2 + Math.random()*4;
 
    
   let circle = document.createElement("a-sphere");
@@ -66,11 +71,32 @@ class Ufo{
     this.obj.setAttribute("position",{x:x, y:y, z:z});
     scene.append( this.obj )
   }
-   spin(){
-    this.a += this.da;
-    this.obj.setAttribute("rotation",{x:0, y:this.a, z:0});
+   scale(size){
+    this.obj.setAttribute("scale",{x:size,y:size,z:size});
   }
 
+fly(){
+    this.x -= this.dx;
+    this.y -= this.dy;
+
+   
+    this.obj.setAttribute("position", {x: this.x, y: this.y, z: this.z});
+    this.obj.setAttribute("rotation",{x:0, y:this.ry, z:0});
+
+    
+    if (this.y <= 5){
+      this.y = 5;
+    }
+    if (this.x <= -8){
+      this.x = -8;
+    }
 
 
   }
+
+ spin(){
+    this.ry = (this.ry + this.spinSpeed) % 360;
+    this.obj.setAttribute("rotation",{x:0, y:this.ry, z:0});
+ }
+
+}

@@ -92,7 +92,7 @@ class Rocket{
 
 fly(){
     this.x += this.dx;
-    this.obj.setAttribute("position", {x: this.x, y: this.x, z:this.z});
+    this.obj.setAttribute("position", {x: this.y, y: this.x, z:this.z});
   }
 
 }
