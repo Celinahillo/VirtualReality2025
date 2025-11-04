@@ -5,11 +5,15 @@ window.addEventListener("DOMContentLoaded",function() {
   target.a = 0;
   target.da = -1;
 
+
   loop();
 })
 
 function loop(){
   target.a += target.da;
+  if(target.a < -45 || target.a > 45){
+    target.da *= -1;
+  }
 
   target.setAttribute("rotation",{x:target.a, y:0, z: 0});
 
