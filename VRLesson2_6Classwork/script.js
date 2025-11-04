@@ -1,5 +1,5 @@
 let scene;
-let mech = [];
+let mech;
 let mechs = [];
 
 window.addEventListener("DOMContentLoaded",function() {

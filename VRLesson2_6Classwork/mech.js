@@ -6,6 +6,7 @@ class Mech{
 
         this.obj= mech.cloneNode(True);
 
+       this.obj.setAttribute("position",{x:x,y:y,z:z});
         scene.append(this.obj);
     }
 }
