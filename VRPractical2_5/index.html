@@ -2,6 +2,11 @@
   <head>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
     <script src="script.js"></script>
+    <script src="candycane.js"></script>
+    <script src="santa.js"></script>
+    <script src="wall.js"></script>
+    <script src="ornaments.js"></script>
+    <script src="gingerbread.js"></script>
   </head>
   <body>
     <a-scene>
@@ -9,11 +14,63 @@
         <!-- Challenge
              Upload a picture to use as the texture for the walls of your maze if you want
         -->
+        <img id="wall" src="wall.jpg">
+        <img id="candycanes" src="canes.jpg">
+        <img id="shirt" src="shirt.avif">
+        <img id="cry" src="cry.jpg">
+        <img id="ornaments" src="G.jpg">
+        <img id="man" src="man.jpg">
       </a-assets>
-      <a-plane position="0 0 0" rotation="-90 0 0" width="150" height="150" color="#AAFFAA"></a-plane>
-      
-      
-      <a-sky color="blue"></a-sky>
-      <a-camera position="0 1.3 0"> 
-      </a-camera>
+
+      <!-- Jail cell -->
+        <a-box position="-7 8.5 0" height="8" scale="2" width="4" rotation="90 0 0" color="black"></a-box>
+        <a-box position="-7 0 0" height="8" scale="2" width="4" rotation="90 0 0" color="black"></a-box>
+        <a-cylinder position="-10 0 3.5" height="17" radius="0.5" width=1" rotation="0 0 0" color="black"></a-cylinder>
+        <a-cylinder position="-10 0 1" height="17" radius="0.5" width=1" rotation="0 0 0" color="black"></a-cylinder>
+        <a-cylinder position="-10 0 -2" height="17" radius="0.5" width=1" rotation="0 0 0" color="black"></a-cylinder>
+
+        <a-cylinder position="-4 0 3.5" height="17" radius="0.5" width=1" rotation="0 0 0" color="black"></a-cylinder>
+        <a-cylinder position="-4 0 1" height="17" radius="0.5" width=1" rotation="0 0 0" color="black"></a-cylinder>
+        <a-cylinder position="-4 0 -2" height="17" radius="0.5" width=1" rotation="0 0 0" color="black"></a-cylinder>
+
+        <a-cylinder position="-6 0 -3" height="17" radius="0.5" width=1" rotation="0 0 0" color="black"></a-cylinder>
+        <a-cylinder position="-8 0 -3" height="17" radius="0.5" width=1" rotation="0 0 0" color="black"></a-cylinder>
+
+        <a-cylinder position="-6 0 3" height="17" radius="0.5" width=1" rotation="0 0 0" color="black"></a-cylinder>
+        <a-cylinder position="-8 0 3" height="17" radius="0.5" width=1" rotation="0 0 0" color="black"></a-cylinder>
+
+        <a-box position="-2 -0.3 11.5" height="2" scale="1" width="2" rotation="90 90 0" src="start.jpg"></a-box>
+
+        <a-box position="0 5 0" height="3" scale="2" width="3" rotation="0 0 0" color="yellow" src="help.jpg"></a-box>
+    
+      <!-- SAVED SANTA -->
+      <!-- // body -->
+       <a-entity position="40 0 27" rotation="10 -90 0"  >
+    <a-sphere position="-15 2 0" rotation="0 -90 0" radius="2" src="#shirt"></a-sphere>
+    
+     
+    <!-- // head -->
+    <a-sphere position="-15 5 0" rotation="-30 20 0" radius="1" src="happy.jpg" repeat="2 2"></a-sphere>
+
+    <!-- // hat -->
+     <a-cylinder position="-15 6 0" height="0.4" radius="1.2"></a-cylinder>
+     <a-cone position="-15 7 0" radius="2" color="red"></a-cone>
+     <a-sphere position="-15 7.5 0" radius="0.3"></a-sphere>
+
+     <!-- HANDS -->
+     <a-cylinder position="-16 3 0" height="5" radius="0.5" width=1" rotation="0 0 40" color="#AB0F0F"></a-cylinder>
+     <a-sphere position="-17.9 5.4 0" radius="0.4" color="black"></a-sphere>
+     <a-cylinder position="-14 3 0" height="5" radius="0.5" width=1" rotation="0 0 -40" color="#AB0F0F"></a-cylinder>
+     <a-sphere position="-12 5 0" radius="0.4" color="black"></a-sphere>
+
+    </a-entity>
+
+    <a-box position="34 -0.3 12.3" height="2" scale="1" width="2" rotation="90 90 0" src="Save.jpg"></a-box>
+    <a-box position="39 5 17" height="3" scale="2" width="3" rotation="0 -90 0" src="thanks.jpg"></a-box>
+
+
+      <a-plane position="0 0 0" rotation="-90 0 0" width="80" height="80" src="snowground.jpg" repeat="10 10"></a-plane>
+
+     <a-sky src="snowsky.jpg" repeat="4 4"></a-sky>  
+     <a-camera position="-6 1 15"></a-camera>
 </html>
