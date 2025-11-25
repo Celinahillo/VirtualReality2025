@@ -9,8 +9,8 @@ window.addEventListener("DOMContentLoaded",function() {
   loop();
 })
 
-function loop(){
+  function loop(){
 
-    
+
   window.requestAnimationFrame(loop);
 }
