@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded",function() {
   // Challenge 2 - Create a variable for the second target
   ball = document.querySelector("#ball");
   ball.x = -1;
-  ball.dx = -0.002;
+  ball.dx = -0.01;
   
   setTimeout(loop,100);
 })

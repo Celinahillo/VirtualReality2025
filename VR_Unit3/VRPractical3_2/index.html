@@ -9,10 +9,137 @@
         <a-plane color="white" position="0 0 -5" rotation="-90 0 0" width="50" height="50"></a-plane>
         <a-sky color="white"></a-sky>
 
-         <a-entity id="tree" position="4 2 1">
-          <a-cone radius="0.25" scale="0.5 0.75 0.5" color="green"></a-cone>
-          <a-cylinder radius="0.02" position="0 -0.1 0" height="0.5" color="brown"></a-cylinder>
-        </a-entity>
+    <!-- Car -->
+<a-entity id="car" position="10 0 -10">
+
+  <!-- car body -->
+  <a-box wireframe="true" position="0 1.5 0" rotation="0 90 0" width="2" height="2" depth="3">
+    <a-box position="0 0 0" width="2" height="0.1" depth="3" color="#4CC3D9"></a-box>
+  </a-box>
+
+  <a-box wireframe="true" position="0 1.5 -1" rotation="0 90 35" width="1" height="1.4" depth="3">
+    <a-box position="0 0 0" width="0.1" height="1.6" depth="3" color="#4CC3D9"></a-box>
+  </a-box>
+
+  <a-box wireframe="true" position="0 1.5 1" rotation="0 90 -35" width="1" height="1.4" depth="3">
+    <a-box position="0 0 0" width="0.1" height="1.6" depth="3" color="#4CC3D9"></a-box>
+  </a-box>
+
+  <a-box position="0 1.0 1" width="3" height="1" depth="3" color="#4CC3D9"></a-box>
+  <a-box position="0 1.0 -1" width="3" height="1" depth="3" color="#4CC3D9"></a-box>
+
+  <!-- wheels -->
+  <!-- THIS ONE IS CLICKABLE -->
+  <a-cylinder id="carWheel" position="-1.3 0.1 1" rotation="0 0 90" radius="0.5" color="black"></a-cylinder>
+
+  <a-cylinder position="1.5 0.1 1" rotation="0 0 90" radius="0.5" color="black"></a-cylinder>   
+  <a-cylinder position="-1.3 0.1 -1" rotation="0 0 90" radius="0.5" color="black"></a-cylinder>
+  <a-cylinder position="1.5 0.1 -1" rotation="0 0 90" radius="0.5" color="black"></a-cylinder>   
+
+  <!-- windows -->
+  <a-box wireframe="true" position="0 1.7 1" rotation="0 90 55" width="1" height="1.4" depth="2">
+    <a-box position="0 0 0" width="0.8" height="0.1" depth="2.5" color="white"></a-box>
+  </a-box>
+
+  <a-box wireframe="true" position="0 1.75 -1" rotation="0 90 125" width="1" height="1.4" depth="2">
+    <a-box position="0 0 0" width="0.8" height="0.1" depth="2.5" color="white"></a-box>
+  </a-box>
+
+  <!-- lights -->
+  <a-box position="-1 1.1 1.3" width="0.6" height="0.4" depth="0.5" color="red"></a-box>
+  <a-box position="1 1.1 1.3" width="0.6" height="0.4" depth="0.5" color="red"></a-box>
+  <a-box position="-1 1.1 -1.3" width="0.9" height="0.4" depth="0.5" color="red"></a-box>
+  <a-box position="1 1.1 -1.3" width="0.9" height="0.4" depth="0.5" color="red"></a-box>
+
+</a-entity>
+
+    <!-- UFOs -->
+  <a-entity id="ufo" position="0 3 -8" scale="0.3 0.3 0.3">
+      
+  <a-sphere color="#6495ED" position="0 1.5 0" radius="2"></a-sphere>
+
+  <!-- Main body ring -->
+  <a-cylinder color="#4169E1" position="0 0.5 0" radius="2.5" height="1"></a-cylinder>
+
+  <!-- Glass window -->
+  <a-box color="black" position="0 1.3 2" width="2" height="1" depth="0.5"></a-box>
+
+  <!-- Bottom light base -->
+  <a-cylinder color="yellow" position="0 -0.2 0" radius="1" height="0.4"></a-cylinder>
+
+  <!-- Light beam cone (smaller) -->
+  <a-cone color="yellow" position="0 -2 0" radius-bottom="2" height="4"></a-cone>
+
+  <!-- Glow ring -->
+  <a-cylinder color="yellow" position="0 0.8 0" radius="2.6" height="0.1"></a-cylinder>
+
+</a-entity>
+
+    <!-- Rocket -->
+<a-entity id="rocket" position="-3 3 -8" rotation="0 180 0" scale="0.3 0.3 0.3">
+
+  <!-- Main tip -->
+  <a-cone color="red" position="0 3 0" height="5"></a-cone>
+
+  <!-- Main body -->
+  <a-cylinder color="white" position="0 -1.5 0" radius="1" height="4"></a-cylinder>
+
+  <!-- Right booster -->
+  <a-cone color="red" position="1.8 1 0" height="4"></a-cone>
+  <a-cylinder color="white" position="1.8 -3 0" radius="1" height="4"></a-cylinder>
+
+  <!-- Left booster -->
+  <a-cone color="red" position="-1.8 1 0" height="4"></a-cone>
+  <a-cylinder color="white" position="-1.8 -3 0" radius="1" height="4"></a-cylinder>
+
+  <!-- Window -->
+  <a-sphere color="black" position="0 -1 -0.7" radius="0.8"></a-sphere>
+
+  <!-- Button -->
+  <a-sphere color="black" position="0 -2.5 -0.5" radius="0.3"></a-sphere>
+
+  <!-- Fire -->
+  <a-cone color="orange" position="0 -5 0" height="5" rotation="-180 0 0" radius="0.25"></a-cone>
+  <a-cone color="orange" position="1.8 -6 0" height="4" rotation="-180 0 0" radius="0.25"></a-cone>
+  <a-cone color="orange" position="-1.8 -6 0" height="4" rotation="-180 0 0" radius="0.25"></a-cone>
+
+</a-entity>
+
+    <!-- Snowman -->
+
+<a-entity id="snowman" position="-7 0 -8">
+
+  <!-- Body spheres -->
+  <a-sphere position="0 0.5 0" radius="1.25" color="white"></a-sphere>
+  <a-sphere position="0 2 0"   radius="1.05" color="white"></a-sphere>
+  <a-sphere position="0 3.5 0" radius="0.85" color="white"></a-sphere>
+
+  <!-- Eyes -->
+  <a-sphere position="-0.25 3.5 0.85" radius="0.15" color="black"></a-sphere>
+  <a-sphere position="0.25 3.5 0.85" radius="0.15" color="black"></a-sphere>
+
+  <!-- Nose -->
+  <a-cone position="0 3.25 1" rotation="90 0 0" radius-bottom="0.1" radius-top="0.01" height="0.5" color="tomato"></a-cone>
+
+  <!-- Arms -->
+  <a-cylinder position="-1.25 2.75 0.5" rotation="0 0 60" radius="0.15" height="2" color="#A52A2A"></a-cylinder>
+
+  <a-cylinder position="1.25 2.75 0.5" rotation="0 0 -60" radius="0.15" height="2" color="#A52A2A"></a-cylinder>
+
+</a-entity>
+
+    <!-- Tree -->
+
+<a-entity id="tree" position="4 0 -10">
+
+  <!-- Tree trunk -->
+  <a-cylinder position="0 0.5 0" radius="0.25" height="1" color="brown"></a-cylinder>
+
+  <!-- Tree leaves -->
+  <a-cone position="0 2 0" radius-bottom="1" height="2" color="green"></a-cone>
+
+</a-entity>
+
     
         
         <a-camera position="0 2 0">
